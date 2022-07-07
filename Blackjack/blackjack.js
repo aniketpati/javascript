@@ -19,7 +19,11 @@ function startGame(){
 function renderGame(){
 
     sumEl.textContent = "Sum: " + sum;
-    cardEl.textContent = "Card: "+ cards[0] +" " + cards[1];
+    cardEl.textContent = "Cards: "
+    for(let count = 0; count<cards.length; count++)
+    {
+        cardEl.textContent += cards[count] + " ";
+    }
 
   
 if(sum < 21)
@@ -43,6 +47,7 @@ messageEl.textContent = message;
 function newCard()
 {
     let card = 7;
+    cards.push(card);
     sum+=card;
     renderCard();
 }

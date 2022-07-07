@@ -2,12 +2,22 @@ let firstCard = getRandomCard();
 let secondCard = getRandomCard();
 let cards = [firstCard, secondCard];
 sum = firstCard + secondCard;
-let isAlive = false;
+let isAlive = true;
 let hasBlackjack = false;
 let message = "";
 let messageEl = document.getElementById("message-el");
 let sumEl = document.getElementById("sum-el");
 let cardEl = document.getElementById("card-el");
+
+let player = {
+    name : "Aniket",
+    chips : 145
+} 
+
+
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
+
 
 function getRandomCard(){
     let randomNumber = Math.floor(Math.random()*13) + 1;
@@ -63,8 +73,11 @@ messageEl.textContent = message;
 
 function newCard()
 {
+    if(isAlive === true && hasBlackjack === false)
+    {
     let card = getRandomCard();
     cards.push(card);
     sum+=card;
     renderCard();
+    }
 }

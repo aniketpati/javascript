@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    background-color: aqua;
+    color: black;
+
+}
+button{
+    color: brown;
+    width: 150px;
+    background: goldenrod;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-weight: bold;
+    border: none;
+    border-radius: 2px;
+    margin: 4px;
+    margin-top: 2px;
+
+}
+#message-el{
+    font-style: italic;
+}
